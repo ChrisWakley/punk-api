@@ -1,0 +1,15 @@
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+    width: 10vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #AFF6A3;
+    overflow-x: hidden;
+    transition: 0.5s;
+}

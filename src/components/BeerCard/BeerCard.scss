@@ -1,0 +1,26 @@
+.beer-card {
+    height: 100%;
+    width: 100%;
+    .beer-card__image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90%;
+        width: 90%;
+        border-radius: 20px;
+        filter: brightness(60%);
+    }
+    .beer-card__name {
+            position: absolute;
+            color: black;
+            font-size: 5vh;
+    }
+    .beer-card__info {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        .beer-card__text {
+            font-size: 12px;
+        }
+    }
+};
