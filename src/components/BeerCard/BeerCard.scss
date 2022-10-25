@@ -1,26 +1,36 @@
+@use "../../assets/sass/variables" as *;
+
 .beer-card {
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
     width: 100%;
+    background-color: $color-card;
+    border-radius: 15px;
+    margin: 5vh;
     .beer-card__image {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 90%;
-        width: 90%;
+        height: 50%;
+        width: 60%;
         border-radius: 20px;
-        filter: brightness(60%);
+        background-color: $color-white;
     }
     .beer-card__name {
-            position: absolute;
             color: black;
-            font-size: 5vh;
+            font-size: 4vh;
+            margin: 0.5rem 0rem;
     }
     .beer-card__info {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
         .beer-card__text {
-            font-size: 12px;
+            font-size: 1.6vh;
+            background-color: #EFF19D
         }
     }
 };

@@ -1,23 +1,29 @@
-// import beers from "../../../data/data";
-// import "./BeerContainer.scss";
+import React from 'react';
+import "./BeerContainer.scss";
+import BeerCard from "../../components/BeerCard/BeerCard";
 
+const Beers = (props) => {
+    const {beersArray} = props;
 
+    const beerDisplay = beersArray.map((beer, index) => (
+        <BeerCard
+        beer = {beer}
+        image = {beer.image_url}
+        name = {beer.name}
+        tagline = {beer.tagline}
+        description = {beer.description}
+        brewed = {beer.first_brewed}
+        abv = {beer.abv}
+        ph = {beer.ph}
+        key = {beer.name + ' ' + index}
+        />
+    ))
 
-// const BeerContainer = (props) => {
-//     const {beersArr, title} = props;
+    return (
+        <div className="beers">
+            {beerDisplay}
+        </div>
+    )
+}
 
-//     const thumbArr = beersArr
-//         .filter((beer) => beers.image_url)
-//         .map((beer) => beers.image_url)
-
-//     return (
-//         <section className="beer-gallery">
-//             <h1 className="beer-gallery__heading">{title}</h1>
-//             <div className="beer-gallery__carousel">
-
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default BeerContainer
+export default Beers

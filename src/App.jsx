@@ -1,9 +1,12 @@
 import './App.scss';
 import Nav from "./containers/Nav/Nav";
-import BeerCard from './components/BeerCard/BeerCard';
-// import BeerContainer from './containers/BeerContainer/BeerContainer';
+// import BeerCard from './components/BeerCard/BeerCard.jsx';
+import beers from "./data/data.js";
+import Beers from './containers/BeerContainer/BeerContainer';
 // import { useState } from "react";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 const App = () => {
   return (
@@ -14,7 +17,7 @@ const App = () => {
       <div className='App__container'>
         <Nav />
         <section className='App__card-container'>
-          <BeerCard />
+          <Beers beersArray={beers}/>
         </section>
       </div>
     </div>
