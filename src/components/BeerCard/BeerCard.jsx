@@ -1,21 +1,10 @@
 import React from 'react';
 import "./BeerCard.scss";
 
-const BeerCard = (props) => {
-    const {
-        image,
-        name,
-        tagline,
-        description,
-        brewed,
-        abv,
-        ph
-        } = props;
-
-    
+const BeerCard = ({image, name, tagline, description, brewed, abv, ph}) => {
     return ( 
     <div className="beer-card">
-        <img src={image} alt="" className="beer-card__image"/>
+        <img src={image} alt={name} className="beer-card__image"/>
             <h1 className="beer-card__name"> {name}</h1>
             <div className="beer-card__info">
                 <p className="beer-card__text">{tagline}</p>
