@@ -14,7 +14,7 @@ const BeerCard = ({image, name, tagline, description, brewed, abv, ph}) => {
                 <p className="beer-card__text">Acidity in Ph: {ph}</p>
             </div>
     </div>
-    )
+    );
 };
 
 export default BeerCard;

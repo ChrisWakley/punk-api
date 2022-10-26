@@ -1,24 +1,28 @@
 import './App.scss';
 import Nav from "./containers/Nav/Nav";
 // import beers from "./data/data.js";
-import Beers from './containers/BeerContainer/BeerContainer';
-import { useState } from "react";
+import BeerContainer from './containers/BeerContainer/BeerContainer';
+import { useState, useEffect } from "react";
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 
 const App = () => {
-  const [beer, setBeer] = useState();
+  const [beer, setBeer] = useState([]);
 
-  const url = `https://api.punkapi.com/v2/beers?`;
+  
 
-  const getBeer = async () => {  
+  const getBeer = async () => { 
+    const url = "https://api.punkapi.com/v2/beers"; 
     const res = await fetch(url);
     const data = await res.json();
-    setBeer(data.results);
+    console.log(data)
+    setBeer(data);
   };
 
-  getBeer();
+  useEffect(() => {
+    getBeer()
+  }, []);
 
   return (
     <div className="App">
@@ -28,7 +32,7 @@ const App = () => {
       <div className='App__container'>
         <Nav />
         <section className='App__card-container'>
-          <Beers beers={beer}/>
+          <BeerContainer beers={beer}/>
         </section>
       </div>
     </div>
