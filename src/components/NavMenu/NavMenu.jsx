@@ -1,35 +1,15 @@
-import { useState } from "react";
 import "./NavMenu.scss";
 import SearchBar from "../SearchBar/SearchBar";
-
-import blackCross from "../../assets/images/black-cross.png";
+import CheckBoxes from "../CheckBox/CheckBox";
 
 const NavMenu = (props) => {
-    const { toggleNav } = props;
-    const [searchTerm, setSearchTerm] = useState("");
-
-    const handleInput = (event) => {
-        const cleanInput = event.target.value.toLowerCase();
-        setSearchTerm(cleanInput);
-    };
+    const { handleInput, label, handleChange } = props;
 
     return (
         <div className="nav-menu">
             <div className="nav-menu__content">
-                <img 
-                    src={blackCross} 
-                    alt="" 
-                    className="nav-menu__cross"
-                    onClick={toggleNav}
-                />
-                <SearchBar 
-                    label={"beers"}
-                    searchTerm={searchTerm}
-                    handleInput={handleInput}
-                />
-                <p className="nav-menu__item">High ABV</p>
-                <p className="nav-menu__item">Classic Range</p>
-                <p className="nav-menu__item">Acidic</p>
+                <SearchBar handleInput = {handleInput} label = {label}/>
+                <CheckBoxes handleChange={handleChange}/>
             </div>
         </div>
     );

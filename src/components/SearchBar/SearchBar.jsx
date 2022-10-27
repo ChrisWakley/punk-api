@@ -1,19 +1,16 @@
 import "./SearchBar.scss";
 
-const SearchBar = (name, searchTerm, handleInput) => {
-
-    // const CapitalisedName = name[0].toUpperCase() + name.slice(1);
+const SearchBar = (props) => {
+    const { label, handleInput } = props;
 
     return (
-        <form className="search-bar">
-            <label htmlFor={name} className="search-bar__name"></label>
-                {/* {CapitalisedName} */}
+        <form classlabel="search-bar">
+            <label htmlFor={label} className="search-bar__label"></label>
             <input 
                 type="text"
-                name= {name}
-                value= {searchTerm}
+                name= {label}
                 onInput= {handleInput}
-                className="search-bar__input"
+                classlabel="search-bar__input"
                 />
         </form>
     );

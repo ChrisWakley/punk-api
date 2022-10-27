@@ -15,6 +15,7 @@
     }
     .App__container {
         display: flex;
+        flex-direction: column;
         width: 100%;
         .App__card-container {
             width: 100%;
