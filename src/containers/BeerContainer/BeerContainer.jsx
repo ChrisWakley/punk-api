@@ -12,7 +12,7 @@ const BeerContainer = ({ beers }) => {
             image = {beer.image_url}
             name = {beer.name}
             tagline = {beer.tagline}
-            // description = {beer.description}
+            description = {beer.description}
             brewed = {beer.first_brewed}
             abv = {beer.abv}
             ph = {beer.ph}

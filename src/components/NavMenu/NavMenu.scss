@@ -14,26 +14,83 @@
     }
     &__item {
         font-size: 12px;
-        text-decoration: none;
         color: $color-black;
     }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 481px) {
     .nav-menu {
-        background-color: rgba($color-black, 0.8);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    &__content {
-        position: relative;
-        background-color: $color-secondary;
-        width: 30%;
-        height: 30vw;
-        border-radius: 15px;
-    }
-        &__cross {
-            right: 20px;
+        form {
+            font-size: 1rem;
+            width: 20rem;
+            input {
+                    width: 15rem;
+                    height: 1.5rem;
+            }
         }
+        label {
+            font-size: 1rem;
+            input {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+        &__content {
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width: 609px) {
+    .nav-menu {
+        form {
+            font-size: 1.5rem;
+        }
+        label {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .nav-menu {
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100vh;
+        form {
+            font-size: 1rem;
+            width: 10rem;
+            input {
+                    width: 10rem;
+                    height: 1.5rem;
+            }
+        }
+        label {
+            font-size: 1rem;
+            input {
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+        .nav-menu__content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .checkboxes {
+                display: flex;
+                flex-direction: column;
+                height: 15rem;
+                justify-content: space-evenly;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1705px) {
+    .nav-menu {
+        width: 15%;
     }
 }

@@ -1,36 +1,120 @@
 @use "../../assets/sass/variables" as *;
 
 .beer-card {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     background-color: $color-card;
     border-radius: 15px;
     margin: 5vh;
-    .beer-card__image {
+    .beer-card__content {
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 50%;
-        width: 60%;
-        border-radius: 20px;
-        background-color: $color-white;
-    }
-    .beer-card__name {
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+        &--text {
+            height: 100%;
+            padding: 0px 20px;
+            top: 0;
+            overflow-y: auto;
+            white-space: pre-line;
+        }
+        &__cross {
+            height: 25px;
+            width: 25px;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+        .beer-card__image {
+            position: absolute;
+            top: 30%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 50%;
+            width: 60%;
+            border-radius: 20px;
+            background-color: $color-white;
+        }
+        .beer-card__name {
             color: black;
             font-size: 4vh;
             margin: 0.5rem 0rem;
-    }
-    .beer-card__info {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        .beer-card__text {
-            font-size: 1.6vh;
-            background-color: #EFF19D
+        }
+        .beer-card__info {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            .beer-card__text {
+                position: absolute;
+                top: 79%;
+                font-size: 2vh;
+                background-color: #EFF19D
+            }
+            .beer-card__button {
+                position: absolute;
+                bottom: 10px;
+                width: 100%;
+                height: auto;
+            }
         }
     }
 };
+
+@media screen and (min-width: 609px) {
+    .beer-card {
+        width: 45%;
+        margin: 5vh 0vh;
+        .beer-card__content {
+            .beer-card__image {
+                height: 45%;
+            }
+            .beer-card__name {
+                top: 48%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .beer-card {
+        height: 42vh;
+        width: 30%;
+        margin: 2vh 0vh;
+        .beer-card__content {
+            .beer-card__image {
+            height: 42%;
+            width: 55%;
+            }
+            .beer-card__name {
+                font-size: 2.5vh;
+            }
+            .beer-card__info {
+                .beer-card__text {
+                    top: 70%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1205px) {
+    .beer-card {
+        width: 23%;
+    }
+}
+
+@media screen and (min-width: 1705px) {
+    .beer-card {
+        width: 15%;
+    }
+}

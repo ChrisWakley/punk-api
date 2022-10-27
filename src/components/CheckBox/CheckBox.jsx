@@ -8,7 +8,6 @@ const CheckBoxes = ({handleChange}) => {
                 <input type="checkbox" 
                 value="highABV"
                 onChange={handleChange}
-
                 />
                 ABV &gt; 6%
             </label >
@@ -16,7 +15,6 @@ const CheckBoxes = ({handleChange}) => {
                 <input type="checkbox" 
                 value="Classic"
                 onChange={handleChange}
-
                 />
                 Classic Range
             </label>
